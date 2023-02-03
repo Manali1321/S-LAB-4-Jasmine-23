@@ -15,6 +15,9 @@ describe("Test to Fail", function () {
     it("should return ‘A value was not entered.’ if it receives an empty string.", function () {
         expect(guessNum('')).toEqual("A value was not entered.");
     });
+    it("should return ‘A number was not input.’ if the value entered is not a number.", function () {
+        expect(guessNum('!')).toEqual("A number was not input.");
+    });
 });
 describe("GuessNum Boundary testing", function () {
     it("should return ‘Way off!!!! Pick between 1 and 10.’ if the value entered is a number outside of the allowed range of guessing values.", function () {
